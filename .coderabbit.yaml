@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+reviews:
+  path_instructions:
+    - path: src/**
+      instructions: When adding or changing a resource-read function under src/, encode the resource ID in its URL, return undefined for 404 responses, throw HttpStatusError carrying the response status for other non-OK responses, and parse JSON on success. Accept an injectable Transport that defaults to fetch so callers and tests can supply the transport.
